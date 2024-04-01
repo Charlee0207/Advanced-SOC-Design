@@ -1,0 +1,1001 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Apr  1 23:07:37 2024
+# Process ID: 92853
+# Current directory: /home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab1-1_fsic-sim/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc
+# Command line: xsim -mode tcl -source {xsim.dir/tb_fsic_xelab/xsim_script.tcl}
+# Log file: /home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab1-1_fsic-sim/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc/xsim.log
+# Journal file: /home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab1-1_fsic-sim/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc/xsim.jou
+# Running On: chngh, OS: Linux, CPU Frequency: 4349.387 MHz, CPU Physical cores: 4, Host memory: 16438 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_fsic_xelab/xsim_script.tcl
+# xsim {tb_fsic_xelab} -autoloadwcfg -tclbatch {log_wave.tcl}
+Time resolution is 1 ps
+open_wave_config /home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab1-1_fsic-sim/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc/tb_fsic_xelab.wcfg
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vccd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vccd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vssd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vssd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/vccd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/vccd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/vssd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/vssd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_rd_ptr_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_up_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_aa_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/delaynext was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_m_axis was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/reg_edgedetect_done was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/edgedetect_done was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/rd_state was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/rd_next_state was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/reg_widthIn was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/reg_heightIn was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/reg_sw_in was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/reg_rst was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/crc32_stream_in was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/crc32_stream_out was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/reg_crc32_stream_in was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_USER_SUBSYS0/U_USRPRJ0/reg_crc32_stream_out was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_up_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_rd_ptr_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_up_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_aa_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/delaynext was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_m_axis was not found in the design.
+source log_wave.tcl
+## log_wave -quiet -verbose -recursive *
+## run all
+SOC & FPGA Reset
+                  40=> soc POR Assert
+                  40=> fpga POR Assert
+                  40=> fpga reset Assert
+                  80=> soc POR De-Assert
+                  80=> fpga POR De-Assert
+                 120=> fpga reset De-Assert
+                 185=> fpga_as_to_is_init done
+                 225=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000001, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+                 425=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000001
+                 865=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000003, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+                1025=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000003
+                1265=> soc_up_cfg_write : wbs_adr=30005000, wbs_sel=1111, wbs_wdata=00000001
+                1505=> soc_up_cfg_read : wbs_adr=30005000, wbs_sel=1111
+                1505=> soc wishbone read data result : send soc_cfg_read_event
+                1505=> soc_up_cfg_read : got soc_cfg_read_event
+                1505=> Test1 [PASS] soc_cc_cfg=00000001, cfg_read_data_captured=00000001
+-----------------
+                1745=> soc_up_cfg_read : wbs_adr=30000000, wbs_sel=1111
+                1745=> soc wishbone read data result : send soc_cfg_read_event
+                1745=> soc_up_cfg_read : got soc_cfg_read_event
+                1745=> Test1 [PASS] ap_state=00000004, cfg_read_data_captured=00000004
+-----------------
+                2025=> soc_up_cfg_write : wbs_adr=30000010, wbs_sel=1111, wbs_wdata=00000040
+                2265=> soc_up_cfg_read : wbs_adr=30000010, wbs_sel=1111
+                2265=> soc wishbone read data result : send soc_cfg_read_event
+                2265=> soc_up_cfg_read : got soc_cfg_read_event
+                2265=> Test1 [PASS] data_length=00000040, cfg_read_data_captured=00000040
+-----------------
+                2545=> soc_up_cfg_write : wbs_adr=30000020, wbs_sel=1111, wbs_wdata=00000000
+                2825=> soc_up_cfg_read : wbs_adr=30000020, wbs_sel=1111
+                2825=> soc wishbone read data result : send soc_cfg_read_event
+                2825=> soc_up_cfg_read : got soc_cfg_read_event
+                2825=> Test1 [PASS] tap[          0]=00000000, cfg_read_data_captured=00000000
+-----------------
+                3105=> soc_up_cfg_write : wbs_adr=30000024, wbs_sel=1111, wbs_wdata=fffffff6
+                3385=> soc_up_cfg_read : wbs_adr=30000024, wbs_sel=1111
+                3385=> soc wishbone read data result : send soc_cfg_read_event
+                3385=> soc_up_cfg_read : got soc_cfg_read_event
+                3385=> Test1 [PASS] tap[          1]=fffffff6, cfg_read_data_captured=fffffff6
+-----------------
+                3665=> soc_up_cfg_write : wbs_adr=30000028, wbs_sel=1111, wbs_wdata=fffffff7
+                3945=> soc_up_cfg_read : wbs_adr=30000028, wbs_sel=1111
+                3945=> soc wishbone read data result : send soc_cfg_read_event
+                3945=> soc_up_cfg_read : got soc_cfg_read_event
+                3945=> Test1 [PASS] tap[          2]=fffffff7, cfg_read_data_captured=fffffff7
+-----------------
+                4225=> soc_up_cfg_write : wbs_adr=3000002c, wbs_sel=1111, wbs_wdata=00000017
+                4505=> soc_up_cfg_read : wbs_adr=3000002c, wbs_sel=1111
+                4505=> soc wishbone read data result : send soc_cfg_read_event
+                4505=> soc_up_cfg_read : got soc_cfg_read_event
+                4505=> Test1 [PASS] tap[          3]=00000017, cfg_read_data_captured=00000017
+-----------------
+                4785=> soc_up_cfg_write : wbs_adr=30000030, wbs_sel=1111, wbs_wdata=00000038
+                5065=> soc_up_cfg_read : wbs_adr=30000030, wbs_sel=1111
+                5065=> soc wishbone read data result : send soc_cfg_read_event
+                5065=> soc_up_cfg_read : got soc_cfg_read_event
+                5065=> Test1 [PASS] tap[          4]=00000038, cfg_read_data_captured=00000038
+-----------------
+                5345=> soc_up_cfg_write : wbs_adr=30000034, wbs_sel=1111, wbs_wdata=0000003f
+                5625=> soc_up_cfg_read : wbs_adr=30000034, wbs_sel=1111
+                5625=> soc wishbone read data result : send soc_cfg_read_event
+                5625=> soc_up_cfg_read : got soc_cfg_read_event
+                5625=> Test1 [PASS] tap[          5]=0000003f, cfg_read_data_captured=0000003f
+-----------------
+                5905=> soc_up_cfg_write : wbs_adr=30000038, wbs_sel=1111, wbs_wdata=00000038
+                6185=> soc_up_cfg_read : wbs_adr=30000038, wbs_sel=1111
+                6185=> soc wishbone read data result : send soc_cfg_read_event
+                6185=> soc_up_cfg_read : got soc_cfg_read_event
+                6185=> Test1 [PASS] tap[          6]=00000038, cfg_read_data_captured=00000038
+-----------------
+                6465=> soc_up_cfg_write : wbs_adr=3000003c, wbs_sel=1111, wbs_wdata=00000017
+                6745=> soc_up_cfg_read : wbs_adr=3000003c, wbs_sel=1111
+                6745=> soc wishbone read data result : send soc_cfg_read_event
+                6745=> soc_up_cfg_read : got soc_cfg_read_event
+                6745=> Test1 [PASS] tap[          7]=00000017, cfg_read_data_captured=00000017
+-----------------
+                7025=> soc_up_cfg_write : wbs_adr=30000040, wbs_sel=1111, wbs_wdata=fffffff7
+                7305=> soc_up_cfg_read : wbs_adr=30000040, wbs_sel=1111
+                7305=> soc wishbone read data result : send soc_cfg_read_event
+                7305=> soc_up_cfg_read : got soc_cfg_read_event
+                7305=> Test1 [PASS] tap[          8]=fffffff7, cfg_read_data_captured=fffffff7
+-----------------
+                7585=> soc_up_cfg_write : wbs_adr=30000044, wbs_sel=1111, wbs_wdata=fffffff6
+                7865=> soc_up_cfg_read : wbs_adr=30000044, wbs_sel=1111
+                7865=> soc wishbone read data result : send soc_cfg_read_event
+                7865=> soc_up_cfg_read : got soc_cfg_read_event
+                7865=> Test1 [PASS] tap[          9]=fffffff6, cfg_read_data_captured=fffffff6
+-----------------
+                8145=> soc_up_cfg_write : wbs_adr=30000048, wbs_sel=1111, wbs_wdata=00000000
+                8425=> soc_up_cfg_read : wbs_adr=30000048, wbs_sel=1111
+                8425=> soc wishbone read data result : send soc_cfg_read_event
+                8425=> soc_up_cfg_read : got soc_cfg_read_event
+                8425=> Test1 [PASS] tap[         10]=00000000, cfg_read_data_captured=00000000
+-----------------
+                8705=> soc_up_cfg_write : wbs_adr=30000000, wbs_sel=1111, wbs_wdata=00000001
+                8945=> soc_up_cfg_read : wbs_adr=30000000, wbs_sel=1111
+                8945=> soc wishbone read data result : send soc_cfg_read_event
+                8945=> soc_up_cfg_read : got soc_cfg_read_event
+                8945=> Test1 [PASS] ap_state=00000001, cfg_read_data_captured=00000001
+-----------------
+                9265=> soc_aa_cfg_write : wbs_adr=30002000, wbs_sel=1111, wbs_wdata=0a0a0a0a
+                9745=> get soc_to_fpga_mailbox_write_addr_captured be : soc_to_fpga_mailbox_write_addr_captured =xxxxxxxx, fpga_is_as_tdata=f0002000
+                9745=> get soc_to_fpga_mailbox_write_addr_captured af : soc_to_fpga_mailbox_write_addr_captured =f0002000, fpga_is_as_tdata=f0002000
+                9985=> get soc_to_fpga_mailbox_write_data_captured be : soc_to_fpga_mailbox_write_data_captured =xxxxxxxx, fpga_is_as_tdata=0a0a0a0a
+                9985=> get soc_to_fpga_mailbox_write_data_captured af : soc_to_fpga_mailbox_write_data_captured =0a0a0a0a, fpga_is_as_tdata=0a0a0a0a
+                9985=> soc_to_fpga_mailbox_write_data_captured : send soc_to_fpga_mailbox_write_event
+               10305=> soc_aa_cfg_read : wbs_adr=30002000, wbs_sel=1111
+               10305=> soc wishbone read data result : send soc_cfg_read_event
+               10305=> soc_aa_cfg_read : got soc_cfg_read_event
+               10305=> Test1 [PASS] start_pattern=0a0a0a0a, cfg_read_data_captured=0a0a0a0a
+-----------------
+               11425=> soc_aa_cfg_write : wbs_adr=30002000, wbs_sel=1111, wbs_wdata=0a0a0a0a
+               11905=> get soc_to_fpga_mailbox_write_addr_captured be : soc_to_fpga_mailbox_write_addr_captured =f0002000, fpga_is_as_tdata=f0002000
+               11905=> get soc_to_fpga_mailbox_write_addr_captured af : soc_to_fpga_mailbox_write_addr_captured =f0002000, fpga_is_as_tdata=f0002000
+               12145=> get soc_to_fpga_mailbox_write_data_captured be : soc_to_fpga_mailbox_write_data_captured =0a0a0a0a, fpga_is_as_tdata=0a0a0a0a
+               12145=> get soc_to_fpga_mailbox_write_data_captured af : soc_to_fpga_mailbox_write_data_captured =0a0a0a0a, fpga_is_as_tdata=0a0a0a0a
+               12145=> soc_to_fpga_mailbox_write_data_captured : send soc_to_fpga_mailbox_write_event
+               12145=> Test1 : got soc_to_fpga_mailbox_write_event
+               12145=> Test1 [PASS] soc_to_fpga_mailbox_write_addr_expect_value=0002000, soc_to_fpga_mailbox_write_addr_captured[27:0]=0002000
+               12145=> Test1 [PASS] soc_to_fpga_mailbox_write_addr_BE_expect_value=f, soc_to_fpga_mailbox_write_addr_captured[31:28]=f
+               12145=> Test1 [PASS] soc_to_fpga_mailbox_write_data_expect_value=0a0a0a0a, soc_to_fpga_mailbox_write_data_captured=0a0a0a0a
+-----------------
+Test length is         64
+====================
+Pattern [         0]: input_data is :          1, golden_data is :          0
+               12145=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000001
+Pattern [         1]: input_data is :          2, golden_data is :        -10
+               12185=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000002
+Pattern [         2]: input_data is :          3, golden_data is :        -29
+               12225=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000003
+Pattern [         3]: input_data is :          4, golden_data is :        -25
+               12265=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000004
+Pattern [         4]: input_data is :          5, golden_data is :         35
+               12305=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000005
+Pattern [         5]: input_data is :          6, golden_data is :        158
+               12345=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000006
+Pattern [         6]: input_data is :          7, golden_data is :        337
+               12385=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000007
+Pattern [         7]: input_data is :          8, golden_data is :        539
+               12425=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000008
+Pattern [         8]: input_data is :          9, golden_data is :        732
+               12465=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000009
+Pattern [         9]: input_data is :         10, golden_data is :        915
+               12505=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000a
+Pattern [        10]: input_data is :         11, golden_data is :       1098
+               12545=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000b
+Pattern [        11]: input_data is :         12, golden_data is :       1281
+               12585=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000c
+Pattern [        12]: input_data is :         13, golden_data is :       1464
+               12625=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000d
+Pattern [        13]: input_data is :         14, golden_data is :       1647
+               12665=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000e
+Pattern [        14]: input_data is :         15, golden_data is :       1830
+               12705=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000f
+Pattern [        15]: input_data is :         16, golden_data is :       2013
+               12745=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000010
+Pattern [        16]: input_data is :         17, golden_data is :       2196
+               12785=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000011
+               13065=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         0,  soc_to_fpga_axis_captured[         0] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000000
+               13065=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         0,  soc_to_fpga_axis_captured[         0] =00000000, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000000
+               13625=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         1,  soc_to_fpga_axis_captured[         1] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=fffffff6
+               13625=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         1,  soc_to_fpga_axis_captured[         1] =fffffff6, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=fffffff6
+               14185=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         2,  soc_to_fpga_axis_captured[         2] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe3
+               14185=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         2,  soc_to_fpga_axis_captured[         2] =ffffffe3, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe3
+               14745=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         3,  soc_to_fpga_axis_captured[         3] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe7
+               14745=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         3,  soc_to_fpga_axis_captured[         3] =ffffffe7, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe7
+               15305=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         4,  soc_to_fpga_axis_captured[         4] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000023
+               15305=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         4,  soc_to_fpga_axis_captured[         4] =00000023, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000023
+               15865=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         5,  soc_to_fpga_axis_captured[         5] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000009e
+               15865=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         5,  soc_to_fpga_axis_captured[         5] =0000009e, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000009e
+               16425=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         6,  soc_to_fpga_axis_captured[         6] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000151
+               16425=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         6,  soc_to_fpga_axis_captured[         6] =00000151, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000151
+               16985=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         7,  soc_to_fpga_axis_captured[         7] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000021b
+               16985=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         7,  soc_to_fpga_axis_captured[         7] =0000021b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000021b
+               17545=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         8,  soc_to_fpga_axis_captured[         8] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000002dc
+               17545=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         8,  soc_to_fpga_axis_captured[         8] =000002dc, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000002dc
+Pattern [        17]: input_data is :         18, golden_data is :       2379
+               17665=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000012
+Pattern [        18]: input_data is :         19, golden_data is :       2562
+               17705=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000013
+Pattern [        19]: input_data is :         20, golden_data is :       2745
+               17745=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000014
+Pattern [        20]: input_data is :         21, golden_data is :       2928
+               17785=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000015
+Pattern [        21]: input_data is :         22, golden_data is :       3111
+               17825=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000016
+Pattern [        22]: input_data is :         23, golden_data is :       3294
+               17865=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000017
+Pattern [        23]: input_data is :         24, golden_data is :       3477
+               17905=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000018
+Pattern [        24]: input_data is :         25, golden_data is :       3660
+               17945=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000019
+Pattern [        25]: input_data is :         26, golden_data is :       3843
+               17985=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001a
+               18105=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         9,  soc_to_fpga_axis_captured[         9] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000393
+               18105=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         9,  soc_to_fpga_axis_captured[         9] =00000393, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000393
+               18665=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        10,  soc_to_fpga_axis_captured[        10] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000044a
+               18665=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        10,  soc_to_fpga_axis_captured[        10] =0000044a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000044a
+               19225=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        11,  soc_to_fpga_axis_captured[        11] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000501
+               19225=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        11,  soc_to_fpga_axis_captured[        11] =00000501, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000501
+               19785=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        12,  soc_to_fpga_axis_captured[        12] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000005b8
+               19785=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        12,  soc_to_fpga_axis_captured[        12] =000005b8, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000005b8
+               20345=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        13,  soc_to_fpga_axis_captured[        13] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000066f
+               20345=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        13,  soc_to_fpga_axis_captured[        13] =0000066f, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000066f
+               20905=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        14,  soc_to_fpga_axis_captured[        14] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000726
+               20905=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        14,  soc_to_fpga_axis_captured[        14] =00000726, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000726
+               21465=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        15,  soc_to_fpga_axis_captured[        15] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000007dd
+               21465=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        15,  soc_to_fpga_axis_captured[        15] =000007dd, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000007dd
+               22025=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        16,  soc_to_fpga_axis_captured[        16] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000894
+               22025=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        16,  soc_to_fpga_axis_captured[        16] =00000894, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000894
+               22585=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        17,  soc_to_fpga_axis_captured[        17] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000094b
+               22585=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        17,  soc_to_fpga_axis_captured[        17] =0000094b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000094b
+Pattern [        26]: input_data is :         27, golden_data is :       4026
+               22705=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001b
+Pattern [        27]: input_data is :         28, golden_data is :       4209
+               22745=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001c
+Pattern [        28]: input_data is :         29, golden_data is :       4392
+               22785=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001d
+Pattern [        29]: input_data is :         30, golden_data is :       4575
+               22825=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001e
+Pattern [        30]: input_data is :         31, golden_data is :       4758
+               22865=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001f
+Pattern [        31]: input_data is :         32, golden_data is :       4941
+               22905=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000020
+Pattern [        32]: input_data is :         33, golden_data is :       5124
+               22945=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000021
+Pattern [        33]: input_data is :         34, golden_data is :       5307
+               22985=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000022
+Pattern [        34]: input_data is :         35, golden_data is :       5490
+               23025=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000023
+               23145=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        18,  soc_to_fpga_axis_captured[        18] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000a02
+               23145=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        18,  soc_to_fpga_axis_captured[        18] =00000a02, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000a02
+               23705=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        19,  soc_to_fpga_axis_captured[        19] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000ab9
+               23705=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        19,  soc_to_fpga_axis_captured[        19] =00000ab9, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000ab9
+               24265=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        20,  soc_to_fpga_axis_captured[        20] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000b70
+               24265=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        20,  soc_to_fpga_axis_captured[        20] =00000b70, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000b70
+               24825=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        21,  soc_to_fpga_axis_captured[        21] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000c27
+               24825=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        21,  soc_to_fpga_axis_captured[        21] =00000c27, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000c27
+               25385=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        22,  soc_to_fpga_axis_captured[        22] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000cde
+               25385=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        22,  soc_to_fpga_axis_captured[        22] =00000cde, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000cde
+               25945=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        23,  soc_to_fpga_axis_captured[        23] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000d95
+               25945=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        23,  soc_to_fpga_axis_captured[        23] =00000d95, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000d95
+               26505=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        24,  soc_to_fpga_axis_captured[        24] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000e4c
+               26505=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        24,  soc_to_fpga_axis_captured[        24] =00000e4c, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000e4c
+               27065=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        25,  soc_to_fpga_axis_captured[        25] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000f03
+               27065=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        25,  soc_to_fpga_axis_captured[        25] =00000f03, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000f03
+               27625=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        26,  soc_to_fpga_axis_captured[        26] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000fba
+               27625=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        26,  soc_to_fpga_axis_captured[        26] =00000fba, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000fba
+Pattern [        35]: input_data is :         36, golden_data is :       5673
+               27745=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000024
+Pattern [        36]: input_data is :         37, golden_data is :       5856
+               27785=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000025
+Pattern [        37]: input_data is :         38, golden_data is :       6039
+               27825=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000026
+Pattern [        38]: input_data is :         39, golden_data is :       6222
+               27865=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000027
+Pattern [        39]: input_data is :         40, golden_data is :       6405
+               27905=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000028
+Pattern [        40]: input_data is :         41, golden_data is :       6588
+               27945=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000029
+Pattern [        41]: input_data is :         42, golden_data is :       6771
+               27985=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002a
+Pattern [        42]: input_data is :         43, golden_data is :       6954
+               28025=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002b
+Pattern [        43]: input_data is :         44, golden_data is :       7137
+               28065=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002c
+               28185=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        27,  soc_to_fpga_axis_captured[        27] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001071
+               28185=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        27,  soc_to_fpga_axis_captured[        27] =00001071, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001071
+               28745=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        28,  soc_to_fpga_axis_captured[        28] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001128
+               28745=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        28,  soc_to_fpga_axis_captured[        28] =00001128, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001128
+               29305=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        29,  soc_to_fpga_axis_captured[        29] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000011df
+               29305=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        29,  soc_to_fpga_axis_captured[        29] =000011df, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000011df
+               29865=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        30,  soc_to_fpga_axis_captured[        30] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001296
+               29865=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        30,  soc_to_fpga_axis_captured[        30] =00001296, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001296
+               30425=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        31,  soc_to_fpga_axis_captured[        31] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000134d
+               30425=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        31,  soc_to_fpga_axis_captured[        31] =0000134d, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000134d
+               30985=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        32,  soc_to_fpga_axis_captured[        32] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001404
+               30985=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        32,  soc_to_fpga_axis_captured[        32] =00001404, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001404
+               31545=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        33,  soc_to_fpga_axis_captured[        33] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000014bb
+               31545=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        33,  soc_to_fpga_axis_captured[        33] =000014bb, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000014bb
+               32105=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        34,  soc_to_fpga_axis_captured[        34] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001572
+               32105=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        34,  soc_to_fpga_axis_captured[        34] =00001572, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001572
+               32665=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        35,  soc_to_fpga_axis_captured[        35] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001629
+               32665=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        35,  soc_to_fpga_axis_captured[        35] =00001629, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001629
+Pattern [        44]: input_data is :         45, golden_data is :       7320
+               32785=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002d
+Pattern [        45]: input_data is :         46, golden_data is :       7503
+               32825=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002e
+Pattern [        46]: input_data is :         47, golden_data is :       7686
+               32865=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002f
+Pattern [        47]: input_data is :         48, golden_data is :       7869
+               32905=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000030
+Pattern [        48]: input_data is :         49, golden_data is :       8052
+               32945=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000031
+Pattern [        49]: input_data is :         50, golden_data is :       8235
+               32985=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000032
+Pattern [        50]: input_data is :         51, golden_data is :       8418
+               33025=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000033
+Pattern [        51]: input_data is :         52, golden_data is :       8601
+               33065=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000034
+Pattern [        52]: input_data is :         53, golden_data is :       8784
+               33105=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000035
+               33225=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        36,  soc_to_fpga_axis_captured[        36] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000016e0
+               33225=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        36,  soc_to_fpga_axis_captured[        36] =000016e0, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000016e0
+               33785=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        37,  soc_to_fpga_axis_captured[        37] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001797
+               33785=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        37,  soc_to_fpga_axis_captured[        37] =00001797, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001797
+               34345=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        38,  soc_to_fpga_axis_captured[        38] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000184e
+               34345=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        38,  soc_to_fpga_axis_captured[        38] =0000184e, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000184e
+               34905=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        39,  soc_to_fpga_axis_captured[        39] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001905
+               34905=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        39,  soc_to_fpga_axis_captured[        39] =00001905, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001905
+               35465=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        40,  soc_to_fpga_axis_captured[        40] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000019bc
+               35465=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        40,  soc_to_fpga_axis_captured[        40] =000019bc, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000019bc
+               36025=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        41,  soc_to_fpga_axis_captured[        41] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001a73
+               36025=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        41,  soc_to_fpga_axis_captured[        41] =00001a73, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001a73
+               36585=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        42,  soc_to_fpga_axis_captured[        42] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001b2a
+               36585=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        42,  soc_to_fpga_axis_captured[        42] =00001b2a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001b2a
+               37145=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        43,  soc_to_fpga_axis_captured[        43] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001be1
+               37145=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        43,  soc_to_fpga_axis_captured[        43] =00001be1, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001be1
+               37705=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        44,  soc_to_fpga_axis_captured[        44] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001c98
+               37705=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        44,  soc_to_fpga_axis_captured[        44] =00001c98, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001c98
+Pattern [        53]: input_data is :         54, golden_data is :       8967
+               37825=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000036
+Pattern [        54]: input_data is :         55, golden_data is :       9150
+               37865=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000037
+Pattern [        55]: input_data is :         56, golden_data is :       9333
+               37905=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000038
+Pattern [        56]: input_data is :         57, golden_data is :       9516
+               37945=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000039
+Pattern [        57]: input_data is :         58, golden_data is :       9699
+               37985=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003a
+Pattern [        58]: input_data is :         59, golden_data is :       9882
+               38025=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003b
+Pattern [        59]: input_data is :         60, golden_data is :      10065
+               38065=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003c
+Pattern [        60]: input_data is :         61, golden_data is :      10248
+               38105=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003d
+Pattern [        61]: input_data is :         62, golden_data is :      10431
+               38145=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003e
+               38265=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        45,  soc_to_fpga_axis_captured[        45] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001d4f
+               38265=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        45,  soc_to_fpga_axis_captured[        45] =00001d4f, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001d4f
+               38825=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        46,  soc_to_fpga_axis_captured[        46] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001e06
+               38825=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        46,  soc_to_fpga_axis_captured[        46] =00001e06, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001e06
+               39385=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        47,  soc_to_fpga_axis_captured[        47] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001ebd
+               39385=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        47,  soc_to_fpga_axis_captured[        47] =00001ebd, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001ebd
+               39945=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        48,  soc_to_fpga_axis_captured[        48] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001f74
+               39945=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        48,  soc_to_fpga_axis_captured[        48] =00001f74, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001f74
+               40505=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        49,  soc_to_fpga_axis_captured[        49] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000202b
+               40505=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        49,  soc_to_fpga_axis_captured[        49] =0000202b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000202b
+               41065=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        50,  soc_to_fpga_axis_captured[        50] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000020e2
+               41065=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        50,  soc_to_fpga_axis_captured[        50] =000020e2, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000020e2
+               41625=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        51,  soc_to_fpga_axis_captured[        51] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002199
+               41625=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        51,  soc_to_fpga_axis_captured[        51] =00002199, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002199
+               42185=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        52,  soc_to_fpga_axis_captured[        52] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002250
+               42185=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        52,  soc_to_fpga_axis_captured[        52] =00002250, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002250
+               42745=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        53,  soc_to_fpga_axis_captured[        53] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002307
+               42745=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        53,  soc_to_fpga_axis_captured[        53] =00002307, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002307
+Pattern [        62]: input_data is :         63, golden_data is :      10614
+               42865=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003f
+Pattern [        63]: input_data is :         64, golden_data is :      10797
+               42905=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 1, fpga_as_is_tdata = 00000040
+====================
+               42945Test patterns have all streamed
+               42945=> wait for soc_to_fpga_axis_event
+               43305=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        54,  soc_to_fpga_axis_captured[        54] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000023be
+               43305=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        54,  soc_to_fpga_axis_captured[        54] =000023be, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000023be
+               43865=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        55,  soc_to_fpga_axis_captured[        55] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002475
+               43865=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        55,  soc_to_fpga_axis_captured[        55] =00002475, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002475
+               44425=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        56,  soc_to_fpga_axis_captured[        56] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000252c
+               44425=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        56,  soc_to_fpga_axis_captured[        56] =0000252c, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000252c
+               44985=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        57,  soc_to_fpga_axis_captured[        57] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000025e3
+               44985=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        57,  soc_to_fpga_axis_captured[        57] =000025e3, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000025e3
+               45545=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        58,  soc_to_fpga_axis_captured[        58] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000269a
+               45545=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        58,  soc_to_fpga_axis_captured[        58] =0000269a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000269a
+               46105=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        59,  soc_to_fpga_axis_captured[        59] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002751
+               46105=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        59,  soc_to_fpga_axis_captured[        59] =00002751, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002751
+               46665=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        60,  soc_to_fpga_axis_captured[        60] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002808
+               46665=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        60,  soc_to_fpga_axis_captured[        60] =00002808, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002808
+               47225=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        61,  soc_to_fpga_axis_captured[        61] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000028bf
+               47225=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        61,  soc_to_fpga_axis_captured[        61] =000028bf, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000028bf
+               47785=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        62,  soc_to_fpga_axis_captured[        62] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002976
+               47785=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        62,  soc_to_fpga_axis_captured[        62] =00002976, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002976
+               48345=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        63,  soc_to_fpga_axis_captured[        63] =xxxxxxxx, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=1, fpga_is_as_tdata=00002a2d
+               48345=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        63,  soc_to_fpga_axis_captured[        63] =00002a2d, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=1, fpga_is_as_tdata=00002a2d
+               48345=> soc_to_fpga_axis_captured : send soc_to_fpga_axiis_event
+               48345=> soc_to_fpga_axis_expect_count =         64
+               48345=> soc_to_fpga_axis_captured_count =         64
+====================
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          0]=00000000, soc_to_fpga_axis_captured[          0]=00000000
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          1]=fffffff6, soc_to_fpga_axis_captured[          1]=fffffff6
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          2]=ffffffe3, soc_to_fpga_axis_captured[          2]=ffffffe3
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          3]=ffffffe7, soc_to_fpga_axis_captured[          3]=ffffffe7
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          4]=00000023, soc_to_fpga_axis_captured[          4]=00000023
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          5]=0000009e, soc_to_fpga_axis_captured[          5]=0000009e
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          6]=00000151, soc_to_fpga_axis_captured[          6]=00000151
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          7]=0000021b, soc_to_fpga_axis_captured[          7]=0000021b
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          8]=000002dc, soc_to_fpga_axis_captured[          8]=000002dc
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[          9]=00000393, soc_to_fpga_axis_captured[          9]=00000393
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         10]=0000044a, soc_to_fpga_axis_captured[         10]=0000044a
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         11]=00000501, soc_to_fpga_axis_captured[         11]=00000501
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         12]=000005b8, soc_to_fpga_axis_captured[         12]=000005b8
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         13]=0000066f, soc_to_fpga_axis_captured[         13]=0000066f
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         14]=00000726, soc_to_fpga_axis_captured[         14]=00000726
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         15]=000007dd, soc_to_fpga_axis_captured[         15]=000007dd
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         16]=00000894, soc_to_fpga_axis_captured[         16]=00000894
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         17]=0000094b, soc_to_fpga_axis_captured[         17]=0000094b
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         18]=00000a02, soc_to_fpga_axis_captured[         18]=00000a02
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         19]=00000ab9, soc_to_fpga_axis_captured[         19]=00000ab9
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         20]=00000b70, soc_to_fpga_axis_captured[         20]=00000b70
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         21]=00000c27, soc_to_fpga_axis_captured[         21]=00000c27
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         22]=00000cde, soc_to_fpga_axis_captured[         22]=00000cde
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         23]=00000d95, soc_to_fpga_axis_captured[         23]=00000d95
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         24]=00000e4c, soc_to_fpga_axis_captured[         24]=00000e4c
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         25]=00000f03, soc_to_fpga_axis_captured[         25]=00000f03
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         26]=00000fba, soc_to_fpga_axis_captured[         26]=00000fba
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         27]=00001071, soc_to_fpga_axis_captured[         27]=00001071
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         28]=00001128, soc_to_fpga_axis_captured[         28]=00001128
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         29]=000011df, soc_to_fpga_axis_captured[         29]=000011df
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         30]=00001296, soc_to_fpga_axis_captured[         30]=00001296
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         31]=0000134d, soc_to_fpga_axis_captured[         31]=0000134d
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         32]=00001404, soc_to_fpga_axis_captured[         32]=00001404
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         33]=000014bb, soc_to_fpga_axis_captured[         33]=000014bb
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         34]=00001572, soc_to_fpga_axis_captured[         34]=00001572
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         35]=00001629, soc_to_fpga_axis_captured[         35]=00001629
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         36]=000016e0, soc_to_fpga_axis_captured[         36]=000016e0
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         37]=00001797, soc_to_fpga_axis_captured[         37]=00001797
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         38]=0000184e, soc_to_fpga_axis_captured[         38]=0000184e
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         39]=00001905, soc_to_fpga_axis_captured[         39]=00001905
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         40]=000019bc, soc_to_fpga_axis_captured[         40]=000019bc
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         41]=00001a73, soc_to_fpga_axis_captured[         41]=00001a73
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         42]=00001b2a, soc_to_fpga_axis_captured[         42]=00001b2a
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         43]=00001be1, soc_to_fpga_axis_captured[         43]=00001be1
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         44]=00001c98, soc_to_fpga_axis_captured[         44]=00001c98
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         45]=00001d4f, soc_to_fpga_axis_captured[         45]=00001d4f
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         46]=00001e06, soc_to_fpga_axis_captured[         46]=00001e06
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         47]=00001ebd, soc_to_fpga_axis_captured[         47]=00001ebd
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         48]=00001f74, soc_to_fpga_axis_captured[         48]=00001f74
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         49]=0000202b, soc_to_fpga_axis_captured[         49]=0000202b
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         50]=000020e2, soc_to_fpga_axis_captured[         50]=000020e2
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         51]=00002199, soc_to_fpga_axis_captured[         51]=00002199
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         52]=00002250, soc_to_fpga_axis_captured[         52]=00002250
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         53]=00002307, soc_to_fpga_axis_captured[         53]=00002307
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         54]=000023be, soc_to_fpga_axis_captured[         54]=000023be
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         55]=00002475, soc_to_fpga_axis_captured[         55]=00002475
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         56]=0000252c, soc_to_fpga_axis_captured[         56]=0000252c
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         57]=000025e3, soc_to_fpga_axis_captured[         57]=000025e3
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         58]=0000269a, soc_to_fpga_axis_captured[         58]=0000269a
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         59]=00002751, soc_to_fpga_axis_captured[         59]=00002751
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         60]=00002808, soc_to_fpga_axis_captured[         60]=00002808
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         61]=000028bf, soc_to_fpga_axis_captured[         61]=000028bf
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         62]=00002976, soc_to_fpga_axis_captured[         62]=00002976
+               48345=> Test1 [PASS] soc_to_fpga_axis_expect_value[         63]=00002a2d, soc_to_fpga_axis_captured[         63]=00002a2d
+SOC & FPGA Reset
+               48785=> soc POR Assert
+               48785=> fpga POR Assert
+               48785=> fpga reset Assert
+               48825=> soc POR De-Assert
+               48825=> fpga POR De-Assert
+               48865=> fpga reset De-Assert
+               48925=> fpga_as_to_is_init done
+               48965=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000001, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+               49165=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000001
+               49605=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000003, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+               49765=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000003
+               50005=> soc_up_cfg_write : wbs_adr=30005000, wbs_sel=1111, wbs_wdata=00000001
+               50245=> soc_up_cfg_read : wbs_adr=30005000, wbs_sel=1111
+               50245=> soc wishbone read data result : send soc_cfg_read_event
+               50245=> soc_up_cfg_read : got soc_cfg_read_event
+               50245=> Test2 [PASS] soc_cc_cfg=00000001, cfg_read_data_captured=00000001
+-----------------
+               50285=> fpga_axilite_read_req in address req phase = 00000000 - tvalid
+               50325=> fpga_axilite_read_req in address req phase = 00000000 - transfer
+               50325=> Test2 :wait for soc_to_fpga_axilite_read_cpl_event
+               51285=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =xxxxxxxx, fpga_is_as_tdata=00000004
+               51285=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000004, fpga_is_as_tdata=00000004
+               51285=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               51285=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               51285=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000004
+               51285=> Test2 [PASS] ap_state=00000004, soc_to_fpga_axilite_read_cpl_captured=00000004
+-----------------
+               51405=> fpga_axilite_read_req in address req phase = 00000010 - tvalid
+               51445=> fpga_axilite_read_req in address req phase = 00000010 - transfer
+               51445=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               52805=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000004, fpga_is_as_tdata=00000040
+               52805=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000040, fpga_is_as_tdata=00000040
+               52805=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               52805=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               52805=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000040
+               52805=> Test2 [PASS] length=00000040, soc_to_fpga_axilite_read_cpl_captured=00000040
+-----------------
+               52925=> fpga_axilite_read_req in address req phase = 00000020 - tvalid
+               52965=> fpga_axilite_read_req in address req phase = 00000020 - transfer
+               52965=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               54365=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000040, fpga_is_as_tdata=00000000
+               54365=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000000, fpga_is_as_tdata=00000000
+               54365=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               54365=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               54365=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000000
+               54365=> Test2 [PASS] tap[          0]=00000000, soc_to_fpga_axilite_read_cpl_captured=00000000
+-----------------
+               54485=> fpga_axilite_read_req in address req phase = 00000024 - tvalid
+               54525=> fpga_axilite_read_req in address req phase = 00000024 - transfer
+               54525=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               55925=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000000, fpga_is_as_tdata=fffffff6
+               55925=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =fffffff6, fpga_is_as_tdata=fffffff6
+               55925=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               55925=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               55925=> Test2 : soc_to_fpga_axilite_read_cpl_captured=fffffff6
+               55925=> Test2 [PASS] tap[          1]=fffffff6, soc_to_fpga_axilite_read_cpl_captured=fffffff6
+-----------------
+               56045=> fpga_axilite_read_req in address req phase = 00000028 - tvalid
+               56085=> fpga_axilite_read_req in address req phase = 00000028 - transfer
+               56085=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               57485=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =fffffff6, fpga_is_as_tdata=fffffff7
+               57485=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =fffffff7, fpga_is_as_tdata=fffffff7
+               57485=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               57485=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               57485=> Test2 : soc_to_fpga_axilite_read_cpl_captured=fffffff7
+               57485=> Test2 [PASS] tap[          2]=fffffff7, soc_to_fpga_axilite_read_cpl_captured=fffffff7
+-----------------
+               57605=> fpga_axilite_read_req in address req phase = 0000002c - tvalid
+               57645=> fpga_axilite_read_req in address req phase = 0000002c - transfer
+               57645=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               59045=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =fffffff7, fpga_is_as_tdata=00000017
+               59045=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000017, fpga_is_as_tdata=00000017
+               59045=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               59045=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               59045=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000017
+               59045=> Test2 [PASS] tap[          3]=00000017, soc_to_fpga_axilite_read_cpl_captured=00000017
+-----------------
+               59165=> fpga_axilite_read_req in address req phase = 00000030 - tvalid
+               59205=> fpga_axilite_read_req in address req phase = 00000030 - transfer
+               59205=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               60605=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000017, fpga_is_as_tdata=00000038
+               60605=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000038, fpga_is_as_tdata=00000038
+               60605=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               60605=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               60605=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000038
+               60605=> Test2 [PASS] tap[          4]=00000038, soc_to_fpga_axilite_read_cpl_captured=00000038
+-----------------
+               60725=> fpga_axilite_read_req in address req phase = 00000034 - tvalid
+               60765=> fpga_axilite_read_req in address req phase = 00000034 - transfer
+               60765=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               62165=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000038, fpga_is_as_tdata=0000003f
+               62165=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =0000003f, fpga_is_as_tdata=0000003f
+               62165=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               62165=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               62165=> Test2 : soc_to_fpga_axilite_read_cpl_captured=0000003f
+               62165=> Test2 [PASS] tap[          5]=0000003f, soc_to_fpga_axilite_read_cpl_captured=0000003f
+-----------------
+               62285=> fpga_axilite_read_req in address req phase = 00000038 - tvalid
+               62325=> fpga_axilite_read_req in address req phase = 00000038 - transfer
+               62325=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               63725=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =0000003f, fpga_is_as_tdata=00000038
+               63725=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000038, fpga_is_as_tdata=00000038
+               63725=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               63725=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               63725=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000038
+               63725=> Test2 [PASS] tap[          6]=00000038, soc_to_fpga_axilite_read_cpl_captured=00000038
+-----------------
+               63845=> fpga_axilite_read_req in address req phase = 0000003c - tvalid
+               63885=> fpga_axilite_read_req in address req phase = 0000003c - transfer
+               63885=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               65285=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000038, fpga_is_as_tdata=00000017
+               65285=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000017, fpga_is_as_tdata=00000017
+               65285=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               65285=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               65285=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000017
+               65285=> Test2 [PASS] tap[          7]=00000017, soc_to_fpga_axilite_read_cpl_captured=00000017
+-----------------
+               65405=> fpga_axilite_read_req in address req phase = 00000040 - tvalid
+               65445=> fpga_axilite_read_req in address req phase = 00000040 - transfer
+               65445=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               66845=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000017, fpga_is_as_tdata=fffffff7
+               66845=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =fffffff7, fpga_is_as_tdata=fffffff7
+               66845=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               66845=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               66845=> Test2 : soc_to_fpga_axilite_read_cpl_captured=fffffff7
+               66845=> Test2 [PASS] tap[          8]=fffffff7, soc_to_fpga_axilite_read_cpl_captured=fffffff7
+-----------------
+               66965=> fpga_axilite_read_req in address req phase = 00000044 - tvalid
+               67005=> fpga_axilite_read_req in address req phase = 00000044 - transfer
+               67005=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               68405=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =fffffff7, fpga_is_as_tdata=fffffff6
+               68405=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =fffffff6, fpga_is_as_tdata=fffffff6
+               68405=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               68405=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               68405=> Test2 : soc_to_fpga_axilite_read_cpl_captured=fffffff6
+               68405=> Test2 [PASS] tap[          9]=fffffff6, soc_to_fpga_axilite_read_cpl_captured=fffffff6
+-----------------
+               68525=> fpga_axilite_read_req in address req phase = 00000048 - tvalid
+               68565=> fpga_axilite_read_req in address req phase = 00000048 - transfer
+               68565=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               69965=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =fffffff6, fpga_is_as_tdata=00000000
+               69965=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000000, fpga_is_as_tdata=00000000
+               69965=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               69965=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               69965=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000000
+               69965=> Test2 [PASS] tap[         10]=00000000, soc_to_fpga_axilite_read_cpl_captured=00000000
+-----------------
+               70085=> fpga_axilite_read_req in address req phase = 00000000 - tvalid
+               70125=> fpga_axilite_read_req in address req phase = 00000000 - transfer
+               70125=> Test2 : wait for soc_to_fpga_axilite_read_cpl_event
+               71485=> get soc_to_fpga_axilite_read_cpl_captured be : soc_to_fpga_axilite_read_cpl_captured =00000000, fpga_is_as_tdata=00000001
+               71485=> get soc_to_fpga_axilite_read_cpl_captured af : soc_to_fpga_axilite_read_cpl_captured =00000001, fpga_is_as_tdata=00000001
+               71485=> soc_to_fpga_axilite_read_cpl_captured : send soc_to_fpga_axilite_read_cpl_event
+               71485=> Test2 : got soc_to_fpga_axilite_read_cpl_event
+               71485=> Test2 : soc_to_fpga_axilite_read_cpl_captured=00000001
+               71485=> Test2 [PASS] ap_start=00000001, soc_to_fpga_axilite_read_cpl_captured=00000001
+-----------------
+Test length is         64
+====================
+Pattern [         0]: input_data is :          1, golden_data is :          0
+               71485=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000001
+Pattern [         1]: input_data is :          2, golden_data is :        -10
+               71525=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000002
+Pattern [         2]: input_data is :          3, golden_data is :        -29
+               71565=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000003
+Pattern [         3]: input_data is :          4, golden_data is :        -25
+               71605=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000004
+Pattern [         4]: input_data is :          5, golden_data is :         35
+               71645=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000005
+Pattern [         5]: input_data is :          6, golden_data is :        158
+               71685=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000006
+Pattern [         6]: input_data is :          7, golden_data is :        337
+               71725=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000007
+Pattern [         7]: input_data is :          8, golden_data is :        539
+               71765=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000008
+Pattern [         8]: input_data is :          9, golden_data is :        732
+               71805=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000009
+Pattern [         9]: input_data is :         10, golden_data is :        915
+               71845=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000a
+Pattern [        10]: input_data is :         11, golden_data is :       1098
+               71885=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000b
+Pattern [        11]: input_data is :         12, golden_data is :       1281
+               71925=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000c
+Pattern [        12]: input_data is :         13, golden_data is :       1464
+               71965=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000d
+Pattern [        13]: input_data is :         14, golden_data is :       1647
+               72005=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000e
+Pattern [        14]: input_data is :         15, golden_data is :       1830
+               72045=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000f
+Pattern [        15]: input_data is :         16, golden_data is :       2013
+               72085=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000010
+Pattern [        16]: input_data is :         17, golden_data is :       2196
+               72125=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000011
+               72405=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         0,  soc_to_fpga_axis_captured[         0] =00000000, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000000
+               72405=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         0,  soc_to_fpga_axis_captured[         0] =00000000, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000000
+               72965=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         1,  soc_to_fpga_axis_captured[         1] =fffffff6, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=fffffff6
+               72965=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         1,  soc_to_fpga_axis_captured[         1] =fffffff6, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=fffffff6
+               73525=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         2,  soc_to_fpga_axis_captured[         2] =ffffffe3, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe3
+               73525=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         2,  soc_to_fpga_axis_captured[         2] =ffffffe3, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe3
+               74085=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         3,  soc_to_fpga_axis_captured[         3] =ffffffe7, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe7
+               74085=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         3,  soc_to_fpga_axis_captured[         3] =ffffffe7, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=ffffffe7
+               74645=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         4,  soc_to_fpga_axis_captured[         4] =00000023, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000023
+               74645=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         4,  soc_to_fpga_axis_captured[         4] =00000023, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000023
+               75205=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         5,  soc_to_fpga_axis_captured[         5] =0000009e, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000009e
+               75205=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         5,  soc_to_fpga_axis_captured[         5] =0000009e, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000009e
+               75765=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         6,  soc_to_fpga_axis_captured[         6] =00000151, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000151
+               75765=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         6,  soc_to_fpga_axis_captured[         6] =00000151, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000151
+               76325=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         7,  soc_to_fpga_axis_captured[         7] =0000021b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000021b
+               76325=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         7,  soc_to_fpga_axis_captured[         7] =0000021b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000021b
+               76885=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         8,  soc_to_fpga_axis_captured[         8] =000002dc, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000002dc
+               76885=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         8,  soc_to_fpga_axis_captured[         8] =000002dc, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000002dc
+Pattern [        17]: input_data is :         18, golden_data is :       2379
+               77005=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000012
+Pattern [        18]: input_data is :         19, golden_data is :       2562
+               77045=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000013
+Pattern [        19]: input_data is :         20, golden_data is :       2745
+               77085=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000014
+Pattern [        20]: input_data is :         21, golden_data is :       2928
+               77125=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000015
+Pattern [        21]: input_data is :         22, golden_data is :       3111
+               77165=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000016
+Pattern [        22]: input_data is :         23, golden_data is :       3294
+               77205=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000017
+Pattern [        23]: input_data is :         24, golden_data is :       3477
+               77245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000018
+Pattern [        24]: input_data is :         25, golden_data is :       3660
+               77285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000019
+Pattern [        25]: input_data is :         26, golden_data is :       3843
+               77325=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001a
+               77445=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=         9,  soc_to_fpga_axis_captured[         9] =00000393, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000393
+               77445=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=         9,  soc_to_fpga_axis_captured[         9] =00000393, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000393
+               78005=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        10,  soc_to_fpga_axis_captured[        10] =0000044a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000044a
+               78005=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        10,  soc_to_fpga_axis_captured[        10] =0000044a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000044a
+               78565=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        11,  soc_to_fpga_axis_captured[        11] =00000501, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000501
+               78565=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        11,  soc_to_fpga_axis_captured[        11] =00000501, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000501
+               79125=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        12,  soc_to_fpga_axis_captured[        12] =000005b8, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000005b8
+               79125=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        12,  soc_to_fpga_axis_captured[        12] =000005b8, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000005b8
+               79685=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        13,  soc_to_fpga_axis_captured[        13] =0000066f, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000066f
+               79685=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        13,  soc_to_fpga_axis_captured[        13] =0000066f, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000066f
+               80245=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        14,  soc_to_fpga_axis_captured[        14] =00000726, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000726
+               80245=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        14,  soc_to_fpga_axis_captured[        14] =00000726, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000726
+               80805=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        15,  soc_to_fpga_axis_captured[        15] =000007dd, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000007dd
+               80805=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        15,  soc_to_fpga_axis_captured[        15] =000007dd, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000007dd
+               81365=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        16,  soc_to_fpga_axis_captured[        16] =00000894, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000894
+               81365=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        16,  soc_to_fpga_axis_captured[        16] =00000894, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000894
+               81925=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        17,  soc_to_fpga_axis_captured[        17] =0000094b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000094b
+               81925=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        17,  soc_to_fpga_axis_captured[        17] =0000094b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000094b
+Pattern [        26]: input_data is :         27, golden_data is :       4026
+               82045=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001b
+Pattern [        27]: input_data is :         28, golden_data is :       4209
+               82085=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001c
+Pattern [        28]: input_data is :         29, golden_data is :       4392
+               82125=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001d
+Pattern [        29]: input_data is :         30, golden_data is :       4575
+               82165=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001e
+Pattern [        30]: input_data is :         31, golden_data is :       4758
+               82205=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000001f
+Pattern [        31]: input_data is :         32, golden_data is :       4941
+               82245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000020
+Pattern [        32]: input_data is :         33, golden_data is :       5124
+               82285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000021
+Pattern [        33]: input_data is :         34, golden_data is :       5307
+               82325=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000022
+Pattern [        34]: input_data is :         35, golden_data is :       5490
+               82365=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000023
+               82485=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        18,  soc_to_fpga_axis_captured[        18] =00000a02, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000a02
+               82485=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        18,  soc_to_fpga_axis_captured[        18] =00000a02, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000a02
+               83045=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        19,  soc_to_fpga_axis_captured[        19] =00000ab9, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000ab9
+               83045=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        19,  soc_to_fpga_axis_captured[        19] =00000ab9, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000ab9
+               83605=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        20,  soc_to_fpga_axis_captured[        20] =00000b70, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000b70
+               83605=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        20,  soc_to_fpga_axis_captured[        20] =00000b70, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000b70
+               84165=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        21,  soc_to_fpga_axis_captured[        21] =00000c27, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000c27
+               84165=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        21,  soc_to_fpga_axis_captured[        21] =00000c27, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000c27
+               84725=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        22,  soc_to_fpga_axis_captured[        22] =00000cde, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000cde
+               84725=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        22,  soc_to_fpga_axis_captured[        22] =00000cde, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000cde
+               85285=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        23,  soc_to_fpga_axis_captured[        23] =00000d95, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000d95
+               85285=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        23,  soc_to_fpga_axis_captured[        23] =00000d95, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000d95
+               85845=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        24,  soc_to_fpga_axis_captured[        24] =00000e4c, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000e4c
+               85845=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        24,  soc_to_fpga_axis_captured[        24] =00000e4c, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000e4c
+               86405=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        25,  soc_to_fpga_axis_captured[        25] =00000f03, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000f03
+               86405=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        25,  soc_to_fpga_axis_captured[        25] =00000f03, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000f03
+               86965=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        26,  soc_to_fpga_axis_captured[        26] =00000fba, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000fba
+               86965=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        26,  soc_to_fpga_axis_captured[        26] =00000fba, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00000fba
+Pattern [        35]: input_data is :         36, golden_data is :       5673
+               87085=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000024
+Pattern [        36]: input_data is :         37, golden_data is :       5856
+               87125=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000025
+Pattern [        37]: input_data is :         38, golden_data is :       6039
+               87165=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000026
+Pattern [        38]: input_data is :         39, golden_data is :       6222
+               87205=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000027
+Pattern [        39]: input_data is :         40, golden_data is :       6405
+               87245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000028
+Pattern [        40]: input_data is :         41, golden_data is :       6588
+               87285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000029
+Pattern [        41]: input_data is :         42, golden_data is :       6771
+               87325=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002a
+Pattern [        42]: input_data is :         43, golden_data is :       6954
+               87365=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002b
+Pattern [        43]: input_data is :         44, golden_data is :       7137
+               87405=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002c
+               87525=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        27,  soc_to_fpga_axis_captured[        27] =00001071, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001071
+               87525=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        27,  soc_to_fpga_axis_captured[        27] =00001071, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001071
+               88085=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        28,  soc_to_fpga_axis_captured[        28] =00001128, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001128
+               88085=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        28,  soc_to_fpga_axis_captured[        28] =00001128, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001128
+               88645=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        29,  soc_to_fpga_axis_captured[        29] =000011df, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000011df
+               88645=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        29,  soc_to_fpga_axis_captured[        29] =000011df, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000011df
+               89205=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        30,  soc_to_fpga_axis_captured[        30] =00001296, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001296
+               89205=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        30,  soc_to_fpga_axis_captured[        30] =00001296, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001296
+               89765=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        31,  soc_to_fpga_axis_captured[        31] =0000134d, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000134d
+               89765=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        31,  soc_to_fpga_axis_captured[        31] =0000134d, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000134d
+               90325=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        32,  soc_to_fpga_axis_captured[        32] =00001404, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001404
+               90325=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        32,  soc_to_fpga_axis_captured[        32] =00001404, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001404
+               90885=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        33,  soc_to_fpga_axis_captured[        33] =000014bb, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000014bb
+               90885=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        33,  soc_to_fpga_axis_captured[        33] =000014bb, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000014bb
+               91445=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        34,  soc_to_fpga_axis_captured[        34] =00001572, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001572
+               91445=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        34,  soc_to_fpga_axis_captured[        34] =00001572, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001572
+               92005=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        35,  soc_to_fpga_axis_captured[        35] =00001629, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001629
+               92005=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        35,  soc_to_fpga_axis_captured[        35] =00001629, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001629
+Pattern [        44]: input_data is :         45, golden_data is :       7320
+               92125=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002d
+Pattern [        45]: input_data is :         46, golden_data is :       7503
+               92165=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002e
+Pattern [        46]: input_data is :         47, golden_data is :       7686
+               92205=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000002f
+Pattern [        47]: input_data is :         48, golden_data is :       7869
+               92245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000030
+Pattern [        48]: input_data is :         49, golden_data is :       8052
+               92285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000031
+Pattern [        49]: input_data is :         50, golden_data is :       8235
+               92325=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000032
+Pattern [        50]: input_data is :         51, golden_data is :       8418
+               92365=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000033
+Pattern [        51]: input_data is :         52, golden_data is :       8601
+               92405=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000034
+Pattern [        52]: input_data is :         53, golden_data is :       8784
+               92445=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000035
+               92565=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        36,  soc_to_fpga_axis_captured[        36] =000016e0, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000016e0
+               92565=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        36,  soc_to_fpga_axis_captured[        36] =000016e0, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000016e0
+               93125=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        37,  soc_to_fpga_axis_captured[        37] =00001797, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001797
+               93125=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        37,  soc_to_fpga_axis_captured[        37] =00001797, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001797
+               93685=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        38,  soc_to_fpga_axis_captured[        38] =0000184e, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000184e
+               93685=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        38,  soc_to_fpga_axis_captured[        38] =0000184e, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000184e
+               94245=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        39,  soc_to_fpga_axis_captured[        39] =00001905, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001905
+               94245=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        39,  soc_to_fpga_axis_captured[        39] =00001905, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001905
+               94805=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        40,  soc_to_fpga_axis_captured[        40] =000019bc, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000019bc
+               94805=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        40,  soc_to_fpga_axis_captured[        40] =000019bc, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000019bc
+               95365=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        41,  soc_to_fpga_axis_captured[        41] =00001a73, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001a73
+               95365=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        41,  soc_to_fpga_axis_captured[        41] =00001a73, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001a73
+               95925=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        42,  soc_to_fpga_axis_captured[        42] =00001b2a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001b2a
+               95925=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        42,  soc_to_fpga_axis_captured[        42] =00001b2a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001b2a
+               96485=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        43,  soc_to_fpga_axis_captured[        43] =00001be1, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001be1
+               96485=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        43,  soc_to_fpga_axis_captured[        43] =00001be1, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001be1
+               97045=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        44,  soc_to_fpga_axis_captured[        44] =00001c98, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001c98
+               97045=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        44,  soc_to_fpga_axis_captured[        44] =00001c98, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001c98
+Pattern [        53]: input_data is :         54, golden_data is :       8967
+               97165=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000036
+Pattern [        54]: input_data is :         55, golden_data is :       9150
+               97205=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000037
+Pattern [        55]: input_data is :         56, golden_data is :       9333
+               97245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000038
+Pattern [        56]: input_data is :         57, golden_data is :       9516
+               97285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000039
+Pattern [        57]: input_data is :         58, golden_data is :       9699
+               97325=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003a
+Pattern [        58]: input_data is :         59, golden_data is :       9882
+               97365=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003b
+Pattern [        59]: input_data is :         60, golden_data is :      10065
+               97405=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003c
+Pattern [        60]: input_data is :         61, golden_data is :      10248
+               97445=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003d
+Pattern [        61]: input_data is :         62, golden_data is :      10431
+               97485=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003e
+               97605=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        45,  soc_to_fpga_axis_captured[        45] =00001d4f, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001d4f
+               97605=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        45,  soc_to_fpga_axis_captured[        45] =00001d4f, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001d4f
+               98165=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        46,  soc_to_fpga_axis_captured[        46] =00001e06, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001e06
+               98165=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        46,  soc_to_fpga_axis_captured[        46] =00001e06, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001e06
+               98725=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        47,  soc_to_fpga_axis_captured[        47] =00001ebd, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001ebd
+               98725=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        47,  soc_to_fpga_axis_captured[        47] =00001ebd, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001ebd
+               99285=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        48,  soc_to_fpga_axis_captured[        48] =00001f74, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001f74
+               99285=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        48,  soc_to_fpga_axis_captured[        48] =00001f74, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00001f74
+               99845=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        49,  soc_to_fpga_axis_captured[        49] =0000202b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000202b
+               99845=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        49,  soc_to_fpga_axis_captured[        49] =0000202b, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000202b
+              100405=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        50,  soc_to_fpga_axis_captured[        50] =000020e2, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000020e2
+              100405=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        50,  soc_to_fpga_axis_captured[        50] =000020e2, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000020e2
+              100965=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        51,  soc_to_fpga_axis_captured[        51] =00002199, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002199
+              100965=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        51,  soc_to_fpga_axis_captured[        51] =00002199, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002199
+              101525=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        52,  soc_to_fpga_axis_captured[        52] =00002250, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002250
+              101525=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        52,  soc_to_fpga_axis_captured[        52] =00002250, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002250
+              102085=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        53,  soc_to_fpga_axis_captured[        53] =00002307, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002307
+              102085=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        53,  soc_to_fpga_axis_captured[        53] =00002307, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002307
+Pattern [        62]: input_data is :         63, golden_data is :      10614
+              102205=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000003f
+Pattern [        63]: input_data is :         64, golden_data is :      10797
+              102245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 1, fpga_as_is_tdata = 00000040
+====================
+              102285Test patterns have all streamed
+              102285=> wait for soc_to_fpga_axis_event
+              102645=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        54,  soc_to_fpga_axis_captured[        54] =000023be, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000023be
+              102645=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        54,  soc_to_fpga_axis_captured[        54] =000023be, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000023be
+              103205=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        55,  soc_to_fpga_axis_captured[        55] =00002475, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002475
+              103205=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        55,  soc_to_fpga_axis_captured[        55] =00002475, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002475
+              103765=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        56,  soc_to_fpga_axis_captured[        56] =0000252c, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000252c
+              103765=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        56,  soc_to_fpga_axis_captured[        56] =0000252c, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000252c
+              104325=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        57,  soc_to_fpga_axis_captured[        57] =000025e3, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000025e3
+              104325=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        57,  soc_to_fpga_axis_captured[        57] =000025e3, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000025e3
+              104885=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        58,  soc_to_fpga_axis_captured[        58] =0000269a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000269a
+              104885=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        58,  soc_to_fpga_axis_captured[        58] =0000269a, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=0000269a
+              105445=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        59,  soc_to_fpga_axis_captured[        59] =00002751, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002751
+              105445=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        59,  soc_to_fpga_axis_captured[        59] =00002751, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002751
+              106005=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        60,  soc_to_fpga_axis_captured[        60] =00002808, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002808
+              106005=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        60,  soc_to_fpga_axis_captured[        60] =00002808, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002808
+              106565=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        61,  soc_to_fpga_axis_captured[        61] =000028bf, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000028bf
+              106565=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        61,  soc_to_fpga_axis_captured[        61] =000028bf, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=000028bf
+              107125=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        62,  soc_to_fpga_axis_captured[        62] =00002976, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002976
+              107125=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        62,  soc_to_fpga_axis_captured[        62] =00002976, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=0, fpga_is_as_tdata=00002976
+              107685=> get soc_to_fpga_axis be : soc_to_fpga_axis_captured_count=        63,  soc_to_fpga_axis_captured[        63] =00002a2d, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=1, fpga_is_as_tdata=00002a2d
+              107685=> get soc_to_fpga_axis af : soc_to_fpga_axis_captured_count=        63,  soc_to_fpga_axis_captured[        63] =00002a2d, fpga_is_as_tupsb=00, fpga_is_as_tstrb=0, fpga_is_as_tkeep=0 , fpga_is_as_tlast=1, fpga_is_as_tdata=00002a2d
+              107685=> soc_to_fpga_axis_captured : send soc_to_fpga_axiis_event
+              107685=> soc_to_fpga_axis_expect_count =         64
+              107685=> soc_to_fpga_axis_captured_count =         64
+====================
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          0]=00000000, soc_to_fpga_axis_captured[          0]=00000000
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          1]=fffffff6, soc_to_fpga_axis_captured[          1]=fffffff6
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          2]=ffffffe3, soc_to_fpga_axis_captured[          2]=ffffffe3
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          3]=ffffffe7, soc_to_fpga_axis_captured[          3]=ffffffe7
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          4]=00000023, soc_to_fpga_axis_captured[          4]=00000023
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          5]=0000009e, soc_to_fpga_axis_captured[          5]=0000009e
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          6]=00000151, soc_to_fpga_axis_captured[          6]=00000151
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          7]=0000021b, soc_to_fpga_axis_captured[          7]=0000021b
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          8]=000002dc, soc_to_fpga_axis_captured[          8]=000002dc
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[          9]=00000393, soc_to_fpga_axis_captured[          9]=00000393
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         10]=0000044a, soc_to_fpga_axis_captured[         10]=0000044a
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         11]=00000501, soc_to_fpga_axis_captured[         11]=00000501
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         12]=000005b8, soc_to_fpga_axis_captured[         12]=000005b8
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         13]=0000066f, soc_to_fpga_axis_captured[         13]=0000066f
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         14]=00000726, soc_to_fpga_axis_captured[         14]=00000726
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         15]=000007dd, soc_to_fpga_axis_captured[         15]=000007dd
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         16]=00000894, soc_to_fpga_axis_captured[         16]=00000894
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         17]=0000094b, soc_to_fpga_axis_captured[         17]=0000094b
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         18]=00000a02, soc_to_fpga_axis_captured[         18]=00000a02
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         19]=00000ab9, soc_to_fpga_axis_captured[         19]=00000ab9
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         20]=00000b70, soc_to_fpga_axis_captured[         20]=00000b70
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         21]=00000c27, soc_to_fpga_axis_captured[         21]=00000c27
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         22]=00000cde, soc_to_fpga_axis_captured[         22]=00000cde
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         23]=00000d95, soc_to_fpga_axis_captured[         23]=00000d95
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         24]=00000e4c, soc_to_fpga_axis_captured[         24]=00000e4c
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         25]=00000f03, soc_to_fpga_axis_captured[         25]=00000f03
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         26]=00000fba, soc_to_fpga_axis_captured[         26]=00000fba
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         27]=00001071, soc_to_fpga_axis_captured[         27]=00001071
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         28]=00001128, soc_to_fpga_axis_captured[         28]=00001128
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         29]=000011df, soc_to_fpga_axis_captured[         29]=000011df
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         30]=00001296, soc_to_fpga_axis_captured[         30]=00001296
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         31]=0000134d, soc_to_fpga_axis_captured[         31]=0000134d
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         32]=00001404, soc_to_fpga_axis_captured[         32]=00001404
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         33]=000014bb, soc_to_fpga_axis_captured[         33]=000014bb
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         34]=00001572, soc_to_fpga_axis_captured[         34]=00001572
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         35]=00001629, soc_to_fpga_axis_captured[         35]=00001629
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         36]=000016e0, soc_to_fpga_axis_captured[         36]=000016e0
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         37]=00001797, soc_to_fpga_axis_captured[         37]=00001797
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         38]=0000184e, soc_to_fpga_axis_captured[         38]=0000184e
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         39]=00001905, soc_to_fpga_axis_captured[         39]=00001905
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         40]=000019bc, soc_to_fpga_axis_captured[         40]=000019bc
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         41]=00001a73, soc_to_fpga_axis_captured[         41]=00001a73
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         42]=00001b2a, soc_to_fpga_axis_captured[         42]=00001b2a
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         43]=00001be1, soc_to_fpga_axis_captured[         43]=00001be1
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         44]=00001c98, soc_to_fpga_axis_captured[         44]=00001c98
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         45]=00001d4f, soc_to_fpga_axis_captured[         45]=00001d4f
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         46]=00001e06, soc_to_fpga_axis_captured[         46]=00001e06
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         47]=00001ebd, soc_to_fpga_axis_captured[         47]=00001ebd
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         48]=00001f74, soc_to_fpga_axis_captured[         48]=00001f74
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         49]=0000202b, soc_to_fpga_axis_captured[         49]=0000202b
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         50]=000020e2, soc_to_fpga_axis_captured[         50]=000020e2
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         51]=00002199, soc_to_fpga_axis_captured[         51]=00002199
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         52]=00002250, soc_to_fpga_axis_captured[         52]=00002250
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         53]=00002307, soc_to_fpga_axis_captured[         53]=00002307
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         54]=000023be, soc_to_fpga_axis_captured[         54]=000023be
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         55]=00002475, soc_to_fpga_axis_captured[         55]=00002475
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         56]=0000252c, soc_to_fpga_axis_captured[         56]=0000252c
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         57]=000025e3, soc_to_fpga_axis_captured[         57]=000025e3
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         58]=0000269a, soc_to_fpga_axis_captured[         58]=0000269a
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         59]=00002751, soc_to_fpga_axis_captured[         59]=00002751
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         60]=00002808, soc_to_fpga_axis_captured[         60]=00002808
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         61]=000028bf, soc_to_fpga_axis_captured[         61]=000028bf
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         62]=00002976, soc_to_fpga_axis_captured[         62]=00002976
+              107685=> Test2 [PASS] soc_to_fpga_axis_expect_value[         63]=00002a2d, soc_to_fpga_axis_captured[         63]=00002a2d
+=============================================================================================
+=============================================================================================
+=============================================================================================
+              108085=> Test1 final result [PASS], check_cnt = 0020, error_cnt = 0000
+              108085=> Test2 final result [PASS], check_cnt = 0016, error_cnt = 0000
+=============================================================================================
+=============================================================================================
+=============================================================================================
+$finish called at time : 108085 ns : File "/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab1-1_fsic-sim/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tb_fsic.v" Line 575
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Apr  1 23:07:40 2024...
