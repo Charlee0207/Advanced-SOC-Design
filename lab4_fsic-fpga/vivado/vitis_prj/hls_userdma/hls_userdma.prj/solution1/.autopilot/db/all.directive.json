@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "userdma",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "userdma"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/directives.tcl",
+    "sourceLine": 6,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "userdma",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "userdma"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/script.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

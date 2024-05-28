@@ -1,0 +1,98 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "4 1 3 6",
+    "file": "userdma.cpp",
+    "fileloc": 164,
+    "instructions": 88,
+    "name": "userdma",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 2208
+  },
+  "1": {
+    "basicblocks": 20,
+    "calls": "5",
+    "file": "userdma.cpp",
+    "fileloc": 4,
+    "instructions": 82,
+    "loads": {
+      "G": 3,
+      "L": 3
+    },
+    "name": "streamtoparallelwithburst",
+    "stores": {
+      "G": 4,
+      "L": 4
+    },
+    "total_instructions": 267
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "userdma.h",
+    "fileloc": 38,
+    "instructions": 7,
+    "name": "out_data",
+    "total_instructions": 28
+  },
+  "3": {
+    "basicblocks": 27,
+    "calls": "2",
+    "file": "userdma.cpp",
+    "fileloc": 83,
+    "instructions": 133,
+    "loads": {
+      "G": 9,
+      "L": 7
+    },
+    "name": "paralleltostreamwithburst",
+    "stores": {
+      "G": 6,
+      "L": 6
+    },
+    "total_instructions": 474
+  },
+  "4": {
+    "basicblocks": 33,
+    "calls": "",
+    "file": "userdma.cpp",
+    "fileloc": 40,
+    "instructions": 158,
+    "loads": {
+      "G": 4,
+      "L": 4
+    },
+    "name": "getinstream",
+    "stores": {
+      "G": 4,
+      "L": 9
+    },
+    "total_instructions": 994
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "userdma.h",
+    "fileloc": 33,
+    "instructions": 5,
+    "name": "data",
+    "total_instructions": 19
+  },
+  "6": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "userdma.cpp",
+    "fileloc": 136,
+    "instructions": 76,
+    "loads": {
+      "L": 3
+    },
+    "name": "sendoutstream",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 349
+  }
+}

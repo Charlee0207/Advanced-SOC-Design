@@ -1,0 +1,36 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="userdma" col1="userdma.cpp:164" col2="2208" col3="378" col4="353" col5="400">
+                    <row id="3" col0="getinstream" col1="userdma.cpp:40" col2="994" col3="112" col4="85" col5="86"/>
+                    <row id="4" col0="streamtoparallelwithburst" col1="userdma.cpp:4" col2="267" col3="50" col4="47" col5="52">
+                        <row id="6" col0="data" col1="userdma.h:33" col2="19" col3="" col4="" col5=""/>
+                    </row>
+                    <row id="2" col0="paralleltostreamwithburst" col1="userdma.cpp:83" col2="474" col3="77" col4="89" col5="97">
+                        <row id="5" col0="out_data" col1="userdma.h:38" col2="28" col3="" col4="" col5=""/>
+                    </row>
+                    <row id="1" col0="sendoutstream" col1="userdma.cpp:136" col2="349" col3="65" col4="76" col5="72"/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

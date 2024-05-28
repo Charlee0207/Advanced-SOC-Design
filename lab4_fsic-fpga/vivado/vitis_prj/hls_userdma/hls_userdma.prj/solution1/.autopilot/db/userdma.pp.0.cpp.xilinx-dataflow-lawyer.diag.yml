@@ -1,0 +1,16 @@
+---
+MainSourceFile:  /home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '203:53'
+    FilePath:        userdma.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '204:61'
+    FilePath:        userdma.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '206:51'
+    FilePath:        userdma.cpp
+...

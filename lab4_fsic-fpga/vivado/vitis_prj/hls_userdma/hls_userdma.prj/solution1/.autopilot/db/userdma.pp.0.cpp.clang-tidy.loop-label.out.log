@@ -1,0 +1,60 @@
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:1321:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:1321:7: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:2295:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:2295:5: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:2309:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:2309:5: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:2323:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:2323:5: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:3934:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:3934:7: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6358:4: warning: Added loop label VITIS_LOOP_20_1:   [xilinx-label-all-loops]
+   do {
+   ^~
+   VITIS_LOOP_20_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6358:4: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6361:5: warning: Added loop label VITIS_LOOP_23_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < count; ++i) {
+    ^~~
+    VITIS_LOOP_23_2: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6361:5: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6386:8: warning: Added loop label VITIS_LOOP_48_1:   [xilinx-label-all-loops]
+       do {
+       ^~
+       VITIS_LOOP_48_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6386:8: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6436:4: warning: Added loop label VITIS_LOOP_98_1:   [xilinx-label-all-loops]
+   do {
+   ^~
+   VITIS_LOOP_98_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6436:4: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6444:5: warning: Added loop label VITIS_LOOP_106_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < count; ++i) {
+    ^~~
+    VITIS_LOOP_106_2: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6444:5: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6485:5: warning: Added loop label VITIS_LOOP_147_1:   [xilinx-label-all-loops]
+    do {
+    ^~
+    VITIS_LOOP_147_1: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6485:5: note: FIX-IT applied suggested code changes
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6487:6: warning: Added loop label VITIS_LOOP_149_2:   [xilinx-label-all-loops]
+     for (int i = 0; i < count; ++i) {
+     ^~~
+     VITIS_LOOP_149_2: 
+/home/chngh/Desktop/2024spring/Advanced_SOC_Design/lab4_fsic-fpga/fsic_fpga/vivado/vitis_prj/hls_userdma/hls_userdma.prj/solution1/.autopilot/db/userdma.pp.0.cpp:6487:6: note: FIX-IT applied suggested code changes
