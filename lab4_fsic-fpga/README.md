@@ -1,18 +1,21 @@
 ### Build `hls_userdma`
 
 ```
-vitis_hls ./vivado/vitis_prj/hls_userdma/script.tcl
+cd ./vivado/vitis_prj/hls_userdma/
+vitis_hls script.tcl
 ```
 
 ### Run Simulation
 
 ```
+cd ./vivado
 ./run_vivado_fsic_sim
 ```
 
 ### Run Synthesis
 
 ```
+cd ./vivado
 ./run_vivado_fsic
 ```
 
