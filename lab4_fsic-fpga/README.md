@@ -12,6 +12,14 @@ cd ./vivado
 ./run_vivado_fsic_sim
 ```
 
+### Check Simulation Result
+```
+cd ./vivado
+vim ./updma_input.log
+vim ./updma_output_gold.log
+vim ./updma_output.log
+```
+
 ### Run Synthesis
 
 ```
